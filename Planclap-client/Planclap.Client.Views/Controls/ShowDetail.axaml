@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:Planclap.Client.Views.Converters"
+             xmlns:iViewModel="clr-namespace:Planclap.Client.Presentations.IViewModel;assembly=Planclap.Client.Presentations"
+             xmlns:view="clr-namespace:Planclap.Client.Presentations.View;assembly=Planclap.Client.Presentations"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="800"
+             x:DataType="iViewModel:IShowDetailViewModel"
+             x:Class="Planclap.Client.Views.Controls.ShowDetail">
+    <UserControl.Resources>
+        <converters:ImageConverter x:Key="ImageConverter" />
+    </UserControl.Resources>
+    <Design.DataContext>
+        <view:DummyShowDetailViewModel />
+    </Design.DataContext>
+    <StackPanel Spacing="8">
+        <Image Source="{Binding Poster, Converter={StaticResource ImageConverter}}" MaxHeight="256" Margin="8" />
+
+        <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" FontSize="18" Margin="8" />
+        <TextBlock Text="{Binding Duration,StringFormat='⌛ {0:hh} h {0:mm}'}" HorizontalAlignment="Center" />
+
+        <ItemsControl HorizontalAlignment="Center" ItemsSource="{Binding Tags}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding ., Converter={StaticResource ImageConverter}}" Height="32" Width="32" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <TextBlock Text="{Binding Description}" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="8" />
+    </StackPanel>
+</UserControl>

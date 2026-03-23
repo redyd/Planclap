@@ -1,0 +1,78 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:iViewModel="clr-namespace:Planclap.Client.Presentations.IViewModel;assembly=Planclap.Client.Presentations"
+             xmlns:view="clr-namespace:Planclap.Client.Presentations.View;assembly=Planclap.Client.Presentations"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="500"
+             x:DataType="iViewModel:IPayBookingViewModel"
+             x:Class="Planclap.Client.Views.Controls.PayBookingForm"
+             x:Name="Form">
+    <Design.DataContext>
+        <view:DummyPayBookingViewModel />
+    </Design.DataContext>
+
+    <Grid x:Name="RootGrid" RowDefinitions="Auto, *, Auto" Background="Transparent" Margin="20" HorizontalAlignment="Center">
+        <Border x:Name="FocusCatcher" Focusable="True" Width="0" Height="0" Opacity="0"/>
+
+        <TextBlock Text="{Binding Title}" FontSize="20" Padding="10" Grid.Row="0" />
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Spacing="10">
+                <ItemsControl ItemsSource="{Binding Inputs}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical" Margin="5" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="4" ColumnSpacing="15" ColumnDefinitions="75,50,Auto">
+                                <TextBlock Grid.Column="0"
+                                           Text="{Binding SeatId, StringFormat='Siège {0}'}"
+                                           VerticalAlignment="Center" />
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding InputValue, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
+                                         VerticalAlignment="Center"
+                                         Watermark="Âge" />
+                                <TextBlock Grid.Column="2"
+                                           Text="{Binding Price, StringFormat={}{0:C1}}"
+                                           VerticalAlignment="Center" HorizontalAlignment="Right"
+                                           IsVisible="{Binding IsValid}" />
+                                <TextBlock Grid.Column="2"
+                                           Text="{Binding WarningInput}"
+                                           VerticalAlignment="Center"
+                                           Foreground="DarkRed"
+                                           IsVisible="{Binding !IsValid}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="2" Spacing="10" Margin="10,0,10,10">
+            <Grid Margin="4" ColumnSpacing="15" ColumnDefinitions="Auto, Auto" RowDefinitions="Auto, Auto">
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Réduction:" FontSize="16" />
+                <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Reduction, StringFormat='{}{0}%'}"
+                           Foreground="DarkRed" FontSize="16" />
+                <TextBlock Grid.Column="0" Grid.Row="1" Text="A payer:" FontSize="16" />
+                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Price, StringFormat='{}{0:F2} €'}"
+                           Foreground="DarkGreen" FontSize="16" />
+            </Grid>
+
+            <TextBlock Text="{Binding WarningMessage}" IsVisible="{Binding ShowWarning}" Foreground="DodgerBlue" />
+
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Button Command="{Binding OnCancel}" Width="200" HorizontalContentAlignment="Center"
+                        BorderBrush="Black">
+                    Annuler
+                </Button>
+                <Button Command="{Binding OnPay}" Width="200" HorizontalContentAlignment="Center"
+                        Background="DodgerBlue" Foreground="White">
+                    Confirmer
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

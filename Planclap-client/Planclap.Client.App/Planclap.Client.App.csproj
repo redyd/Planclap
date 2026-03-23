@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.7"/>
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.7"/>
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.7"/>
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.7"/>
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.3.7"/>
+    <PackageReference Include="CommandLineParser" Version="2.9.1"/>
+    <PackageReference Include="MySqlConnector" Version="2.5.0"/>
+    <PackageReference Include="Serilog" Version="4.3.0"/>
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0"/>
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Planclap.Client.Domains\Planclap.Client.Domains.csproj"/>
+    <ProjectReference Include="..\Planclap.Client.Infrastructures\Planclap.Client.Infrastructures.csproj"/>
+    <ProjectReference Include="..\Planclap.Client.Presentations\Planclap.Client.Presentations.csproj"/>
+    <ProjectReference Include="..\Planclap.Client.Views\Planclap.Client.Views.csproj"/>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,60 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:iViewModel="clr-namespace:Planclap.Client.Presentations.IViewModel;assembly=Planclap.Client.Presentations"
+             mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="728"
+             x:DataType="iViewModel:IPopupViewModel"
+             x:Class="Planclap.Client.Views.Controls.Popup">
+
+    <Border Background="{Binding Color}"
+            CornerRadius="8"
+            Padding="16,12"
+            Margin="8,8,8,0">
+        <Grid ColumnDefinitions="Auto,*,Auto">
+
+            <Border Grid.Column="0"
+                    Background="{Binding Color}"
+                    CornerRadius="12"
+                    Width="24"
+                    Height="24"
+                    Margin="0,0,12,0"
+                    VerticalAlignment="Center">
+                <TextBlock Text="{Binding IconText}"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock Grid.Column="1"
+                       Text="{Binding Content}"
+                       Foreground="White"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Center"/>
+
+            <Button Grid.Column="2"
+                    Command="{Binding Hide}"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Padding="8"
+                    Margin="12,0,0,0"
+                    VerticalAlignment="Center"
+                    Cursor="Hand">
+                <Button.Styles>
+                    <Style Selector="Button:pointerover">
+                        <Setter Property="Background" Value="{Binding Color}"/>
+                    </Style>
+                </Button.Styles>
+                <TextBlock Text="✕"
+                           Foreground="White"
+                           FontSize="16"
+                           FontWeight="Bold"/>
+            </Button>
+
+        </Grid>
+    </Border>
+
+</UserControl>

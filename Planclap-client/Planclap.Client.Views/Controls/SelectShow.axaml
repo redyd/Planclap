@@ -1,0 +1,59 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:imgloader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             xmlns:dtos="clr-namespace:Planclap.Client.Presentations.Dtos;assembly=Planclap.Client.Presentations"
+             xmlns:iViewModel="clr-namespace:Planclap.Client.Presentations.IViewModel;assembly=Planclap.Client.Presentations"
+             xmlns:view="clr-namespace:Planclap.Client.Presentations.View;assembly=Planclap.Client.Presentations"
+             mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="728"
+             x:DataType="iViewModel:ISelectShowViewModel"
+             x:Class="Planclap.Client.Views.Controls.SelectShow">
+    <Design.DataContext>
+        <view:DummySelectShowViewModel />
+    </Design.DataContext>
+    <StackPanel>
+        <TextBlock Text="{Binding Title}" FontSize="20" HorizontalAlignment="Center" Margin="10" />
+
+        <ListBox Name="ShowsView" ItemsSource="{Binding Shows}" SelectedItem="{Binding SelectedShow}" Background="Transparent">
+            <ListBox.Styles>
+                <Style Selector="ListBoxItem" x:DataType="dtos:ShowOverviewDto">
+                    <Setter Property="IsEnabled" Value="{Binding CanBuy}" />
+                </Style>
+            </ListBox.Styles>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Margin="5" ItemWidth="256" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="dtos:ShowOverviewDto">
+                    <StackPanel Width="248" Height="350">
+                        <StackPanel.Styles>
+                            <Style Selector="StackPanel[Tag=False] TextBlock">
+                                <Setter Property="Foreground" Value="Gray" />
+                            </Style>
+                            <Style Selector="StackPanel[Tag=False]">
+                                <Setter Property="Opacity" Value="0.5" />
+                            </Style>
+                        </StackPanel.Styles>
+                        <StackPanel.Tag>
+                            <Binding Path="CanBuy" />
+                        </StackPanel.Tag>
+
+                        <Image imgloader:ImageLoader.Source="{Binding Poster}" MaxHeight="256" />
+                        <TextBlock Text="{Binding Title}"
+                                   FontSize="18" Padding="5"
+                                   HorizontalAlignment="Center" />
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock Text="{Binding StartAt,StringFormat='📆 {0:HH} h {0:mm}'}"
+                                       HorizontalAlignment="Center" />
+                            <TextBlock Text="{Binding Duration,StringFormat='⌛ {0:hh} h {0:mm}'}"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</UserControl>

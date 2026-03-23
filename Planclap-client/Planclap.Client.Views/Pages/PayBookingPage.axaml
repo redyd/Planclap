@@ -1,0 +1,13 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Planclap.Client.Presentations.ViewModel;assembly=Planclap.Client.Presentations"
+             mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
+             x:DataType="vm:PayBookingPageViewModel"
+             xmlns:controls="clr-namespace:Planclap.Client.Views.Controls"
+             x:Class="Planclap.Client.Views.Pages.PayBookingPage">
+    <controls:PayBookingForm
+        Name="Form"
+        DataContext="{Binding PayBookingController}" />
+</UserControl>

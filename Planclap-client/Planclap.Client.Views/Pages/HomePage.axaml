@@ -1,0 +1,40 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Planclap.Client.Presentations.ViewModel;assembly=Planclap.Client.Presentations"
+             mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
+             x:DataType="vm:HomePageViewModel"
+             xmlns:controls="clr-namespace:Planclap.Client.Views.Controls"
+             x:Class="Planclap.Client.Views.Pages.HomePage">
+
+    <Grid RowDefinitions="Auto,*,*" ColumnDefinitions="*, 300" Margin="20">
+
+        <controls:Popup
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,0,0,12"
+            DataContext="{Binding Popup}"
+            IsVisible="{Binding IsVisible}"/>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+            <controls:SelectShow
+                Name="SelectShow"
+                DataContext="{Binding SelectShowController}" />
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+            <controls:ShowDetail
+                Name="ShowDetail"
+                DataContext="{Binding ShowDetailController}" />
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+            <controls:BookingsOverview
+                Name="Bookings"
+                DataContext="{Binding BookingOverviewController}" />
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

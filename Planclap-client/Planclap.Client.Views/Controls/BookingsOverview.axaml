@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="clr-namespace:Planclap.Client.Presentations.View;assembly=Planclap.Client.Presentations"
+             xmlns:iViewModel="clr-namespace:Planclap.Client.Presentations.IViewModel;assembly=Planclap.Client.Presentations"
+             mc:Ignorable="d" d:DesignWidth="180" d:DesignHeight="320"
+             x:DataType="iViewModel:IBookingOverviewViewModel"
+             x:Class="Planclap.Client.Views.Controls.BookingsOverview"
+             x:Name="Bookings">
+    <Design.DataContext>
+        <view:DummyBookingOverviewViewModel />
+    </Design.DataContext>
+    <StackPanel Spacing="8">
+        <TextBlock Text="{Binding ReservationTitle}" FontSize="18" HorizontalAlignment="Center" Margin="8" />
+        <ItemsControl ItemsSource="{Binding Seats}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="{Binding Rows}" Columns="{Binding Columns}" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <ToggleButton HorizontalAlignment="Center"
+                                  VerticalAlignment="Bottom"
+                                  Name="{Binding Id}"
+                                  Width="16"
+                                  Height="16"
+                                  IsChecked="{Binding IsSelected}"
+                                  Command="{Binding ClickCommand}"
+                                  CommandParameter="{Binding .}"
+                                  ToolTip.Tip="{Binding Id, StringFormat='Siège {0}'}">
+                        <ToggleButton.Styles>
+                            <Style Selector="ToggleButton:disabled">
+                                <Setter Property="Background" Value="Salmon" />
+                                <Setter Property="Opacity" Value="0.3" />
+                            </Style>
+                        </ToggleButton.Styles>
+                    </ToggleButton>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Button Name="BookButton"
+                Command="{Binding OnCreateBookingRequested}"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                Margin="8">
+            Réserver
+        </Button>
+    </StackPanel>
+</UserControl>

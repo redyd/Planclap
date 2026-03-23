@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.Presentations.Tests", "Planclap.Client.Presentations.Tests\Planclap.Client.Presentations.Tests.csproj", "{908367E3-BAFE-4AA2-BC82-2BD32E11FAB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.Presentations", "Planclap.Client.Presentations\Planclap.Client.Presentations.csproj", "{54C56191-0EBE-465A-A4B0-B9250E5968BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.Infrastructures.Tests", "Planclap.Client.Infrastructures.Tests\Planclap.Client.Infrastructures.Tests.csproj", "{6722BF5E-9CE8-48BA-B075-46095F3F0279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.Infrastructures", "Planclap.Client.Infrastructures\Planclap.Client.Infrastructures.csproj", "{4D59B0B6-CBF0-4E36-8738-BA1660273B0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.Domains.Tests", "Planclap.Client.Domains.Tests\Planclap.Client.Domains.Tests.csproj", "{14A0394E-71F4-440A-9A25-C8B9B632DED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.Domains", "Planclap.Client.Domains\Planclap.Client.Domains.csproj", "{AEAB38D2-19BE-46AC-ABFF-D113F1683B87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9A37B5D8-F4F4-4C52-9022-A804DDFEFD7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D0DB9FC4-3BA3-4607-87CC-B6F2169681F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.Views", "Planclap.Client.Views\Planclap.Client.Views.csproj", "{3026E3F8-AFBB-474F-8394-54310D7EA572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.App", "Planclap.Client.App\Planclap.Client.App.csproj", "{C4E15350-8189-455D-9DF5-D219A7F70C17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planclap.Client.App.Tests", "Planclap.Client.App.Tests\Planclap.Client.App.Tests.csproj", "{84A183C6-2333-419F-8FCA-633802B95FE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{908367E3-BAFE-4AA2-BC82-2BD32E11FAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908367E3-BAFE-4AA2-BC82-2BD32E11FAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908367E3-BAFE-4AA2-BC82-2BD32E11FAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908367E3-BAFE-4AA2-BC82-2BD32E11FAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C56191-0EBE-465A-A4B0-B9250E5968BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C56191-0EBE-465A-A4B0-B9250E5968BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C56191-0EBE-465A-A4B0-B9250E5968BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C56191-0EBE-465A-A4B0-B9250E5968BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6722BF5E-9CE8-48BA-B075-46095F3F0279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6722BF5E-9CE8-48BA-B075-46095F3F0279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6722BF5E-9CE8-48BA-B075-46095F3F0279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6722BF5E-9CE8-48BA-B075-46095F3F0279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D59B0B6-CBF0-4E36-8738-BA1660273B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D59B0B6-CBF0-4E36-8738-BA1660273B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D59B0B6-CBF0-4E36-8738-BA1660273B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D59B0B6-CBF0-4E36-8738-BA1660273B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14A0394E-71F4-440A-9A25-C8B9B632DED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A0394E-71F4-440A-9A25-C8B9B632DED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A0394E-71F4-440A-9A25-C8B9B632DED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A0394E-71F4-440A-9A25-C8B9B632DED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEAB38D2-19BE-46AC-ABFF-D113F1683B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEAB38D2-19BE-46AC-ABFF-D113F1683B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEAB38D2-19BE-46AC-ABFF-D113F1683B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEAB38D2-19BE-46AC-ABFF-D113F1683B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3026E3F8-AFBB-474F-8394-54310D7EA572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3026E3F8-AFBB-474F-8394-54310D7EA572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3026E3F8-AFBB-474F-8394-54310D7EA572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3026E3F8-AFBB-474F-8394-54310D7EA572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E15350-8189-455D-9DF5-D219A7F70C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E15350-8189-455D-9DF5-D219A7F70C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E15350-8189-455D-9DF5-D219A7F70C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E15350-8189-455D-9DF5-D219A7F70C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A183C6-2333-419F-8FCA-633802B95FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A183C6-2333-419F-8FCA-633802B95FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A183C6-2333-419F-8FCA-633802B95FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A183C6-2333-419F-8FCA-633802B95FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEAB38D2-19BE-46AC-ABFF-D113F1683B87} = {9A37B5D8-F4F4-4C52-9022-A804DDFEFD7F}
+		{4D59B0B6-CBF0-4E36-8738-BA1660273B0E} = {9A37B5D8-F4F4-4C52-9022-A804DDFEFD7F}
+		{54C56191-0EBE-465A-A4B0-B9250E5968BC} = {9A37B5D8-F4F4-4C52-9022-A804DDFEFD7F}
+		{14A0394E-71F4-440A-9A25-C8B9B632DED4} = {D0DB9FC4-3BA3-4607-87CC-B6F2169681F7}
+		{6722BF5E-9CE8-48BA-B075-46095F3F0279} = {D0DB9FC4-3BA3-4607-87CC-B6F2169681F7}
+		{908367E3-BAFE-4AA2-BC82-2BD32E11FAB2} = {D0DB9FC4-3BA3-4607-87CC-B6F2169681F7}
+		{3026E3F8-AFBB-474F-8394-54310D7EA572} = {9A37B5D8-F4F4-4C52-9022-A804DDFEFD7F}
+		{C4E15350-8189-455D-9DF5-D219A7F70C17} = {9A37B5D8-F4F4-4C52-9022-A804DDFEFD7F}
+		{84A183C6-2333-419F-8FCA-633802B95FE9} = {D0DB9FC4-3BA3-4607-87CC-B6F2169681F7}
+	EndGlobalSection
+EndGlobal

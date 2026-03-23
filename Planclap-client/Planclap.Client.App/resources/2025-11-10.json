@@ -1,0 +1,110 @@
+{
+  "movies": [
+    {
+      "slug": "vaiana-2",
+      "title": "Vaiana 2",
+      "duration": 100,
+      "poster": "https://theposterdb.com/api/assets/515709/view",
+      "description": "Vaiana part pour une nouvelle aventure épique à travers les océans de l'Océanie avec ses compagnons. Un voyage musical qui célèbre la famille et le courage.",
+      "cinechecks": [
+        "AL"
+      ],
+      "seances": 5
+    },
+    {
+      "slug": "dune-deuxieme-partie",
+      "title": "Dune : Deuxième Partie",
+      "duration": 166,
+      "poster": "https://theposterdb.com/api/assets/478769/view",
+      "description": "Paul Atreides s'unit à Chani et aux Fremen pour mener la révolte contre ceux qui ont détruit sa famille. Face à un choix entre l'amour et le destin de l'univers.",
+      "cinechecks": [
+        "14",
+        "Violence"
+      ],
+      "seances": 3
+    },
+    {
+      "slug": "kung-fu-panda-4",
+      "title": "Kung Fu Panda 4",
+      "duration": 94,
+      "poster": "https://theposterdb.com/api/assets/486505/view",
+      "description": "Po doit former un nouveau guerrier du Dragon tout en affrontant une sorcière capable de ressusciter ses anciens ennemis. Action et humour pour toute la famille.",
+      "cinechecks": [
+        "6"
+      ],
+      "seances": 5
+    },
+    {
+      "slug": "un-p-tit-truc-en-plus",
+      "title": "Un p'tit truc en plus",
+      "duration": 99,
+      "poster": "https://theposterdb.com/api/assets/519673/view",
+      "description": "Pour échapper à la justice, deux braqueurs se font passer pour des éducateurs spécialisés. Une comédie touchante sur la différence et l'humanité.",
+      "cinechecks": [
+        "9",
+        "Paroles grossieres"
+      ],
+      "seances": 4
+    },
+    {
+      "slug": "vice-versa-2",
+      "title": "Vice-Versa 2",
+      "duration": 96,
+      "poster": "https://theposterdb.com/api/assets/465175/view",
+      "description": "Riley entre dans l'adolescence et de nouvelles émotions débarquent au quartier général : Anxiété, Envie, Ennui et Embarras. Joie et ses amis doivent s'adapter.",
+      "cinechecks": [
+        "AL"
+      ],
+      "seances": 3
+    },
+    {
+      "slug": "godzilla-x-kong-le-nouvel-empire",
+      "title": "Godzilla x Kong : Le Nouvel Empire",
+      "duration": 115,
+      "poster": "https://theposterdb.com/api/assets/468363/view",
+      "description": "Kong et Godzilla doivent unir leurs forces face à une menace colossale cachée dans les profondeurs de la Terre. Action spectaculaire et créatures titanesques.",
+      "cinechecks": [
+        "9",
+        "Violence",
+        "Peur"
+      ],
+      "seances": 3
+    },
+    {
+      "slug": "le-comte-de-monte-cristo",
+      "title": "Le Comte de Monte-Cristo",
+      "duration": 178,
+      "poster": "https://theposterdb.com/api/assets/539099/view",
+      "description": "Adaptation époustouflante du classique d'Alexandre Dumas. L'histoire de vengeance d'Edmond Dantès, trahi et emprisonné, qui devient le mystérieux Comte.",
+      "cinechecks": [
+        "12",
+        "Violence"
+      ],
+      "seances": 4
+    },
+    {
+      "slug": "wicked",
+      "title": "Wicked",
+      "duration": 160,
+      "poster": "https://theposterdb.com/api/assets/540735/view",
+      "description": "L'histoire inédite des sorcières du Pays d'Oz. L'amitié improbable entre Elphaba et Glinda avant qu'elles ne deviennent la Méchante Sorcière et Glinda la Bonne.",
+      "cinechecks": [
+        "6",
+        "Peur"
+      ],
+      "seances": 4
+    },
+    {
+      "slug": "la-passion-de-dodin-bouffant",
+      "title": "La Passion de Dodin Bouffant",
+      "duration": 135,
+      "poster": "https://theposterdb.com/api/assets/468365/view",
+      "description": "L'histoire d'amour entre un gastronome légendaire et sa cuisinière. Un hymne à la cuisine française et aux plaisirs de la table. Palme d'Or 2023.",
+      "cinechecks": [
+        "16",
+        "Sexe"
+      ],
+      "seances": 3
+    }
+  ]
+}

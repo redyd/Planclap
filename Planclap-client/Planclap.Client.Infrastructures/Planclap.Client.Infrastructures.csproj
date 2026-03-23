@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Planclap.Client.Domains\Planclap.Client.Domains.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Be.HenNi.Analyzers" Version="1.0.7"/>
+    <PackageReference Include="IDisposableAnalyzers" Version="4.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySqlConnector" Version="2.5.0"/>
+    <PackageReference Include="Serilog" Version="4.3.0"/>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\CodeMetricsConfig.txt">
+      <Link>CodeMetricsConfig.txt</Link>
+    </AdditionalFiles>
+  </ItemGroup>
+</Project>
