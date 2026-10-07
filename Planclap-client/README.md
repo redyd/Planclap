@@ -8,7 +8,7 @@
 
 ### Prérequis
 
-Vous devez avoir le SDK .NET 8 installé sur votre machine. Pour récupérer le projet, il est préférable d'avoir un client `git` installé. Enfin, nous vous recommandons d'utiliser un EDI comme Rider ou Visual Studio 2022.
+Vous devez avoir le SDK .NET 10 installé sur votre machine. Pour récupérer le projet, il est préférable d'avoir un client `git` installé. Enfin, nous vous recommandons d'utiliser un EDI comme Rider ou Visual Studio 2022.
 
 Vous devez définir un répertoire dans lequel se trouveront des paires de fichiers `(yyyy-mm-dd.csv; yyyy-mm-dd.json)`. Le fichier CSV contient le planning des séances de la semaine `yyyy-mm-dd.csv`, tandis que le fichier JSON contient les films associés aux séances.
 
