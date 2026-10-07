@@ -13,3 +13,22 @@
 2026-10-07 20:53:18.333 +02:00 [INF] Initializing with file
 2026-10-07 20:53:18.333 +02:00 [INF] Dir is 'Planclap.Client.Appresources'
 2026-10-07 20:53:18.335 +02:00 [ERR] Les arguments passes sont invalides (impossible d'acceder a la source de donnees)
+2026-10-07 20:57:25.739 +02:00 [INF] Launching app
+2026-10-07 20:57:25.764 +02:00 [INF] datetime is 2026-10-08T12:00
+2026-10-07 20:57:25.780 +02:00 [INF] Initializing with file
+2026-10-07 20:57:25.781 +02:00 [INF] Dir is 'Planclap.Client.App/resources'
+2026-10-07 20:57:25.789 +02:00 [INF] Fetching all scheduled movies for "2026-10-05T12:00:00.0000000" from file "/home/redyd/School/Codebase/Planclap/Planclap-client/Planclap.Client.App/resources/2026-10-05.csv"
+2026-10-07 20:57:25.834 +02:00 [INF] Successfully fetched 5 schedules
+2026-10-07 20:57:25.837 +02:00 [INF] Starting to fetch every movie with slugs: "wicked", "kung-fu-panda-4", "vice-versa-2", "le-comte-de-monte-cristo", "dune-deuxieme-partie"
+2026-10-07 20:57:25.957 +02:00 [INF] Successfully fetched 5 movies
+2026-10-07 20:57:26.536 +02:00 [INF] Fetching all scheduled movies for "2026-10-05T12:00:00.0000000" from file "/home/redyd/School/Codebase/Planclap/Planclap-client/Planclap.Client.App/resources/2026-10-05.csv"
+2026-10-07 20:57:26.537 +02:00 [INF] Successfully fetched 5 schedules
+2026-10-07 20:57:26.537 +02:00 [INF] Starting to fetch every movie with slugs: "wicked", "kung-fu-panda-4", "vice-versa-2", "le-comte-de-monte-cristo", "dune-deuxieme-partie"
+2026-10-07 20:57:26.537 +02:00 [INF] Successfully fetched 5 movies
+2026-10-07 20:57:26.538 +02:00 [INF] App started with success
+2026-10-07 20:57:50.500 +02:00 [INF] Navigating from Home to PayBooking
+2026-10-07 20:57:50.538 +02:00 [INF] Current page is PayBooking
+2026-10-07 20:58:10.141 +02:00 [INF] Updating reservation for "2026-10-05T12:00:00.0000000": Reservation for "Dune : Deuxième Partie" [Senior:3-1, Child:3-3, Normal:3-2]
+2026-10-07 20:58:10.161 +02:00 [INF] Schedule updated successfully
+2026-10-07 20:58:10.172 +02:00 [INF] Navigating from PayBooking to Home
+2026-10-07 20:58:10.182 +02:00 [INF] Current page is Home
